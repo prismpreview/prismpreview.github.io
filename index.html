@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Prism is a live website theming and visual transformation browser extension for designers and frontend teams."
+    />
+    <title>Prism Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Prism home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>Prism</span>
+      </a>
+      <nav aria-label="Documentation">
+        <a href="#what-is-prism">What is Prism?</a>
+        <a href="#install">Install</a>
+        <a href="#quick-start">Quick Start</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Public documentation</p>
+          <h1>Prism transforms the visual identity of live websites.</h1>
+          <p class="lead">
+            Change colours, typography, density, and shape on conventional DOM and CSS-based
+            websites, compare accessibility impact, and export implementation-ready assets.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="#quick-start">Quick start</a>
+            <a class="button secondary" href="#known-limitations">Known limitations</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img
+            src="assets/prism-live-preview.png"
+            alt="Prism browser extension panel transforming a sample website and reporting accessibility contrast changes."
+            width="1792"
+            height="1024"
+          />
+        </figure>
+      </section>
+
+      <div class="docs-layout">
+        <aside class="sidebar" aria-label="Page sections">
+          <a href="#what-is-prism">What is Prism?</a>
+          <a href="#install">Install the Extension</a>
+          <a href="#quick-start">Quick Start</a>
+          <a href="#theme-studio">Theme Studio</a>
+          <a href="#live-preview">Live Website Preview</a>
+          <a href="#accessibility-impact">Accessibility Impact</a>
+          <a href="#exporting-themes">Exporting Themes</a>
+          <a href="#developer-integration">Developer Integration</a>
+          <a href="#known-limitations">Known Limitations</a>
+          <a href="#roadmap">Roadmap</a>
+        </aside>
+
+        <article class="content">
+          <section id="what-is-prism" class="doc-section">
+            <p class="section-kicker">Overview</p>
+            <h2>What is Prism?</h2>
+            <p>
+              Prism is an extension-first visual transformation platform. It scans the active page,
+              reads visible DOM elements and computed styles, groups visual patterns into semantic
+              roles, and applies a curated or custom theme without modifying the website source.
+            </p>
+            <p>
+              Prism is not a generic CSS editor, full website builder, accessibility certification
+              suite, or AI redesign generator. Its job is to transform a live website's visual
+              system while showing the accessibility impact of that transformation.
+            </p>
+          </section>
+
+          <section id="install" class="doc-section">
+            <p class="section-kicker">Setup</p>
+            <h2>Install the Extension</h2>
+            <ol>
+              <li>Open the Chrome or Edge extensions page.</li>
+              <li>Enable developer mode.</li>
+              <li>Choose <strong>Load unpacked</strong>.</li>
+              <li>Select the Prism extension folder.</li>
+              <li>Open a conventional website and click the Prism toolbar icon.</li>
+            </ol>
+            <p class="note">
+              Chrome and Edge are the initial targets. Firefox and Safari are deferred until the
+              core transformation workflow is validated.
+            </p>
+          </section>
+
+          <section id="quick-start" class="doc-section">
+            <p class="section-kicker">First run</p>
+            <h2>Quick Start</h2>
+            <ol>
+              <li>Open a website you want to preview.</li>
+              <li>Click <strong>Scan</strong> to extract colours and visual roles.</li>
+              <li>Choose a curated theme such as Editorial Ink or Product Clarity.</li>
+              <li>Click <strong>Apply</strong> to transform the visible page.</li>
+              <li>Use the before/after toggle to compare the original and transformed views.</li>
+              <li>Review the coverage score and contrast impact before exporting.</li>
+            </ol>
+          </section>
+
+          <section id="theme-studio" class="doc-section">
+            <p class="section-kicker">Design controls</p>
+            <h2>Theme Studio</h2>
+            <p>
+              Theme Studio is the control surface for changing colour roles, typography, border
+              radius, and density. Prism maps source styles to target tokens by role, so a button
+              background, page background, link colour, and error state can remain distinct even
+              when the original site reused similar raw CSS values.
+            </p>
+            <div class="token-grid" aria-label="Semantic colour roles">
+              <span>Page background</span>
+              <span>Surface background</span>
+              <span>Primary text</span>
+              <span>Secondary text</span>
+              <span>Links</span>
+              <span>Primary actions</span>
+              <span>Success</span>
+              <span>Warning</span>
+              <span>Error</span>
+              <span>Focus indicators</span>
+            </div>
+          </section>
+
+          <section id="live-preview" class="doc-section">
+            <p class="section-kicker">Transformation</p>
+            <h2>Live Website Preview</h2>
+            <p>
+              Prism injects an override stylesheet into the active tab and tags mapped elements
+              with semantic roles. The original site remains untouched. The preview can be toggled
+              off at any time, and saved themes can be associated with a domain locally.
+            </p>
+            <p>
+              The first target is the visible viewport. Future releases will deepen coverage for
+              dynamic applications, component libraries, and state-specific styles.
+            </p>
+          </section>
+
+          <section id="accessibility-impact" class="doc-section">
+            <p class="section-kicker">Regression checks</p>
+            <h2>Accessibility Impact</h2>
+            <p>
+              Prism compares the original and transformed theme for visual accessibility changes.
+              The deterministic engine checks contrast ratios, focus visibility, and newly
+              introduced regressions. AI may later explain findings, but pass/fail decisions should
+              remain deterministic.
+            </p>
+            <ul class="impact-list">
+              <li>Resolved contrast issues</li>
+              <li>Newly introduced contrast issues</li>
+              <li>Improved or regressed text pairs</li>
+              <li>Focus indicator visibility</li>
+              <li>Coverage limits that affect confidence</li>
+            </ul>
+          </section>
+
+          <section id="exporting-themes" class="doc-section">
+            <p class="section-kicker">Handoff</p>
+            <h2>Exporting Themes</h2>
+            <p>
+              Prism exports CSS variables and design-token JSON so designers and developers can
+              move from exploration to implementation. Exports are intended to be reviewed, adapted,
+              and committed by the owning development team.
+            </p>
+            <pre><code>:root {
+  --prism-page-background: #f8f7f3;
+  --prism-primary-text: #171717;
+  --prism-primary-action: #0f4c81;
+}</code></pre>
+          </section>
+
+          <section id="developer-integration" class="doc-section">
+            <p class="section-kicker">Implementation</p>
+            <h2>Developer Integration</h2>
+            <p>
+              The MVP does not modify source code or open pull requests. Developer integration
+              starts with clean exports, stable token names, and clear role mappings. Later phases
+              may add a CLI, SDK, Figma plugin, automated source-code integration, and pull request
+              generation.
+            </p>
+          </section>
+
+          <section id="known-limitations" class="doc-section">
+            <p class="section-kicker">Compatibility</p>
+            <h2>Known Limitations</h2>
+            <p>
+              Prism works with most conventional DOM and CSS-based websites. It should not claim
+              universal compatibility.
+            </p>
+            <ul class="limitation-list">
+              <li>Canvas and WebGL content</li>
+              <li>Text embedded inside images</li>
+              <li>Closed Shadow DOM</li>
+              <li>Cross-origin iframes</li>
+              <li>Highly dynamic applications</li>
+              <li>Sites that aggressively regenerate inline styles</li>
+            </ul>
+          </section>
+
+          <section id="roadmap" class="doc-section">
+            <p class="section-kicker">Direction</p>
+            <h2>Roadmap</h2>
+            <div class="roadmap">
+              <div>
+                <strong>Core proof of concept</strong>
+                <span>Extension scaffold, colour extraction, grouping, one theme, toggle, export.</span>
+              </div>
+              <div>
+                <strong>Semantic theme engine</strong>
+                <span>Role inference, CSS variable detection, status protection, persistence.</span>
+              </div>
+              <div>
+                <strong>Accessibility and export</strong>
+                <span>Contrast deltas, focus checks, coverage score, screenshots, CSS, JSON.</span>
+              </div>
+              <div>
+                <strong>Beta readiness</strong>
+                <span>Onboarding, fixture suite, feedback loops, privacy policy, waitlist.</span>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
