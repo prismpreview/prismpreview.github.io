@@ -20,6 +20,7 @@
         <a href="#what-is-prism">What is Prism?</a>
         <a href="#install">Install</a>
         <a href="#quick-start">Quick Start</a>
+        <a href="#pricing">Pricing</a>
         <a href="#roadmap">Roadmap</a>
       </nav>
     </header>
@@ -27,25 +28,95 @@
     <main id="home">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Public documentation</p>
-          <h1>Prism transforms the visual identity of live websites.</h1>
+          <p class="eyebrow">Chrome extension first</p>
+          <h1>Try new themes on live websites in seconds.</h1>
           <p class="lead">
-            Change colours, typography, density, and shape on conventional DOM and CSS-based
-            websites, compare accessibility impact, and export implementation-ready assets.
+            Prism scans visible DOM and CSS, maps semantic visual roles, previews a coherent
+            theme, reports accessibility impact, and exports implementation-ready CSS or tokens.
           </p>
           <div class="hero-actions" aria-label="Primary links">
             <a class="button primary" href="#quick-start">Quick start</a>
-            <a class="button secondary" href="#known-limitations">Known limitations</a>
+            <a class="button secondary" href="#pricing">See pricing</a>
           </div>
+          <dl class="hero-proof" aria-label="Prism launch principles">
+            <div>
+              <dt>Local-first</dt>
+              <dd>DOM analysis stays in the browser by default.</dd>
+            </div>
+            <div>
+              <dt>Semantic</dt>
+              <dd>Page, surface, text, link, action, and state roles.</dd>
+            </div>
+            <div>
+              <dt>Exportable</dt>
+              <dd>CSS variables and design-token JSON for handoff.</dd>
+            </div>
+          </dl>
         </div>
-        <figure class="hero-media">
-          <img
-            src="assets/prism-live-preview.png"
-            alt="Prism browser extension panel transforming a sample website and reporting accessibility contrast changes."
-            width="1792"
-            height="1024"
-          />
-        </figure>
+        <div class="hero-product" aria-label="Prism scan, transform, accessibility, and export workflow">
+          <div class="browser-frame">
+            <div class="browser-bar" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>staging.acme.test</strong>
+            </div>
+            <div class="preview-stage">
+              <section class="site-before" aria-label="Original website preview">
+                <div class="mini-nav">
+                  <strong>Acme</strong>
+                  <span>Home</span>
+                  <span>Pricing</span>
+                </div>
+                <h2>Launch faster with better handoff.</h2>
+                <p>Muted copy and hard-coded colours before Prism maps the visual system.</p>
+                <button type="button">Start trial</button>
+              </section>
+              <section class="site-after" aria-label="Transformed website preview">
+                <div class="mini-nav">
+                  <strong>Acme</strong>
+                  <span>Home</span>
+                  <span>Pricing</span>
+                </div>
+                <h2>Launch faster with better handoff.</h2>
+                <p>Theme roles applied with stronger contrast and token-ready styles.</p>
+                <button type="button">Start trial</button>
+              </section>
+              <div class="split-handle" aria-hidden="true">Before / After</div>
+            </div>
+          </div>
+
+          <aside class="extension-panel" aria-label="Prism extension panel mockup">
+            <div class="panel-title">
+              <span class="brand-mark small" aria-hidden="true">P</span>
+              <div>
+                <strong>Prism</strong>
+                <span>Visual system scan</span>
+              </div>
+            </div>
+            <div class="coverage-card">
+              <span>Coverage</span>
+              <strong>87%</strong>
+              <small>Mapped visible DOM and CSS roles</small>
+            </div>
+            <div class="role-map" aria-label="Mapped semantic roles">
+              <div><i style="--swatch: #f8f7f3"></i><span>Page background</span><b>#f8f7f3</b></div>
+              <div><i style="--swatch: #171717"></i><span>Primary text</span><b>#171717</b></div>
+              <div><i style="--swatch: #075985"></i><span>Links</span><b>#075985</b></div>
+              <div><i style="--swatch: #0f4c81"></i><span>Actions</span><b>#0f4c81</b></div>
+            </div>
+            <div class="impact-card">
+              <strong>Accessibility impact</strong>
+              <span>8 contrast issues resolved</span>
+              <span>0 new critical regressions</span>
+              <span>Focus ring visible on controls</span>
+            </div>
+            <div class="export-strip">
+              <code>Export CSS</code>
+              <code>Export JSON</code>
+            </div>
+          </aside>
+        </div>
       </section>
 
       <div class="docs-layout">
@@ -58,6 +129,7 @@
           <a href="#accessibility-impact">Accessibility Impact</a>
           <a href="#exporting-themes">Exporting Themes</a>
           <a href="#developer-integration">Developer Integration</a>
+          <a href="#pricing">Pricing</a>
           <a href="#known-limitations">Known Limitations</a>
           <a href="#roadmap">Roadmap</a>
         </aside>
@@ -183,8 +255,52 @@
             <p>
               The MVP does not modify source code or open pull requests. Developer integration
               starts with clean exports, stable token names, and clear role mappings. Later phases
-              may add a CLI, SDK, Figma plugin, automated source-code integration, and pull request
-              generation.
+              may add a free VS Code companion, CLI, SDK, Figma plugin, automated source-code
+              integration, and pull request checks.
+            </p>
+          </section>
+
+          <section id="pricing" class="doc-section">
+            <p class="section-kicker">Plans</p>
+            <h2>Pricing</h2>
+            <p>
+              Prism uses a simple two-tier model. The browser extension remains the first product
+              surface. Premium later unlocks paid capabilities across browser and IDE workflows
+              under one Prism account.
+            </p>
+            <div class="pricing-grid">
+              <article class="plan-card">
+                <div>
+                  <p class="plan-label">Free</p>
+                  <h3>$0</h3>
+                  <p>For local exploration, previews, and early product discovery.</p>
+                </div>
+                <ul>
+                  <li>Chrome extension preview</li>
+                  <li>Built-in themes</li>
+                  <li>Basic contrast checks</li>
+                  <li>Limited local saved themes</li>
+                  <li>Basic CSS and token export</li>
+                </ul>
+              </article>
+              <article class="plan-card highlighted">
+                <div>
+                  <p class="plan-label">Premium</p>
+                  <h3>$12/mo</h3>
+                  <p>For professionals who need durable themes, exports, and implementation help.</p>
+                </div>
+                <ul>
+                  <li>Unlimited saved themes and projects</li>
+                  <li>Custom palettes and token libraries</li>
+                  <li>Complete accessibility deltas</li>
+                  <li>Advanced exports and history</li>
+                  <li>Future VS Code and IDE premium features</li>
+                </ul>
+              </article>
+            </div>
+            <p class="note">
+              Free helps users discover and understand visual problems. Premium helps them
+              implement, automate, and maintain approved themes across their workflow.
             </p>
           </section>
 
@@ -234,4 +350,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
