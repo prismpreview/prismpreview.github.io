@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="prism-body" x1="14" y1="8" x2="38" y2="57" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2d8f" />
+      <stop offset="0.42" stop-color="#9333ea" />
+      <stop offset="0.74" stop-color="#0b63ff" />
+      <stop offset="1" stop-color="#11d3e8" />
+    </linearGradient>
+    <linearGradient id="prism-glass" x1="31" y1="9" x2="57" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.98" />
+      <stop offset="0.38" stop-color="#d6e8ff" stop-opacity="0.86" />
+      <stop offset="1" stop-color="#0b6fae" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="prism-facet" x1="13" y1="11" x2="31" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff0f8b" stop-opacity="0.85" />
+      <stop offset="0.5" stop-color="#7c3aed" stop-opacity="0.54" />
+      <stop offset="1" stop-color="#00c7e8" stop-opacity="0.82" />
+    </linearGradient>
+    <clipPath id="prism-clip" clipPathUnits="userSpaceOnUse">
+      <path
+        d="M11 8H40L56 17V38L40 47H31V56H11V8ZM31 21V34H39L47 29V25L39 21H31Z"
+        clip-rule="evenodd"
+      />
+    </clipPath>
+  </defs>
+
+  <path
+    d="M11 8H40L56 17V38L40 47H31V56H11V8ZM31 21V34H39L47 29V25L39 21H31Z"
+    stroke="#172033"
+    stroke-opacity="0.22"
+    stroke-width="4"
+    stroke-linejoin="round"
+    vector-effect="non-scaling-stroke"
+  />
+  <path
+    d="M11 8H40L56 17V38L40 47H31V56H11V8ZM31 21V34H39L47 29V25L39 21H31Z"
+    fill="url(#prism-body)"
+    fill-rule="evenodd"
+    stroke="#f8fbff"
+    stroke-width="2"
+    stroke-linejoin="round"
+    vector-effect="non-scaling-stroke"
+  />
+  <g clip-path="url(#prism-clip)">
+    <path d="M11 8L31 21V56H11V8Z" fill="url(#prism-facet)" />
+    <path d="M11 8L31 21L11 33Z" fill="#fa0f91" fill-opacity="0.43" />
+    <path d="M11 56L31 42L31 56H11Z" fill="#14d9e9" fill-opacity="0.62" />
+    <path d="M11 33L31 42L11 56V33Z" fill="#075cff" fill-opacity="0.28" />
+    <rect x="31" y="8" width="27" height="49" fill="url(#prism-glass)" />
+    <path
+      d="M31 8V56M40 8V47M48 12V42M56 17V38M31 16L48 8M31 25L56 16M31 34L56 25M31 43L56 34M31 52L40 47M31 13L56 27M31 23L56 37M31 33L48 43M31 43L39 47M20 14L31 21M11 33L31 42M11 56L31 42"
+      stroke="#0f3b63"
+      stroke-opacity="0.24"
+      stroke-width="2.2"
+      stroke-linecap="square"
+      stroke-linejoin="round"
+      vector-effect="non-scaling-stroke"
+    />
+    <path
+      d="M31 8V56M40 8V47M48 12V42M56 17V38M31 16L48 8M31 25L56 16M31 34L56 25M31 43L56 34M31 52L40 47M31 13L56 27M31 23L56 37M31 33L48 43M31 43L39 47M20 14L31 21M11 33L31 42M11 56L31 42"
+      stroke="#f8fbff"
+      stroke-opacity="0.92"
+      stroke-width="1.28"
+      stroke-linecap="square"
+      stroke-linejoin="round"
+      vector-effect="non-scaling-stroke"
+    />
+    <path
+      d="M31 21V56"
+      stroke="#0f172a"
+      stroke-opacity="0.24"
+      stroke-width="1"
+      vector-effect="non-scaling-stroke"
+    />
+  </g>
+</svg>
