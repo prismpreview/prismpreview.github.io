@@ -13,7 +13,16 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Prism home">
-        <span class="brand-mark" aria-hidden="true">P</span>
+        <svg class="prism-logo" viewBox="0 0 48 48" aria-hidden="true">
+          <path class="logo-edge" d="M24 4 42 14 42 34 24 44 6 34 6 14Z" />
+          <path class="logo-spectrum-a" d="M24 4 42 14 30 19Z" />
+          <path class="logo-spectrum-b" d="M24 4 30 19 24 25 18 19Z" />
+          <path class="logo-spectrum-c" d="M24 4 18 19 6 14Z" />
+          <path class="logo-dark-face" d="M6 14 24 25 24 44 6 34Z" />
+          <path class="logo-grid-face" d="M24 25 42 14 42 34 24 44Z" />
+          <path class="logo-grid-line" d="M29 22v19M35 18v19M24 31l18-10M24 37l18-10" />
+          <text x="15.8" y="32.8">P</text>
+        </svg>
         <span>Prism</span>
       </a>
       <nav aria-label="Documentation">
@@ -62,7 +71,8 @@
               <strong>staging.acme.test</strong>
             </div>
             <div class="preview-stage">
-              <section class="site-before" aria-label="Original website preview">
+              <section class="site-original" aria-label="Original website preview before Prism suggestions">
+                <span class="original-badge">Original site before Prism</span>
                 <div class="mini-nav">
                   <strong>Acme</strong>
                   <span>Home</span>
@@ -71,27 +81,30 @@
                 <h2>Launch faster with better handoff.</h2>
                 <p>Muted copy and hard-coded colours before Prism maps the visual system.</p>
                 <button type="button">Start trial</button>
-              </section>
-              <section class="site-after" aria-label="Transformed website preview">
-                <div class="mini-nav">
-                  <strong>Acme</strong>
-                  <span>Home</span>
-                  <span>Pricing</span>
+                <div class="site-card-grid" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <h2>Launch faster with better handoff.</h2>
-                <p>Theme roles applied with stronger contrast and token-ready styles.</p>
-                <button type="button">Start trial</button>
               </section>
-              <div class="split-handle" aria-hidden="true">Before / After</div>
             </div>
           </div>
 
           <aside class="extension-panel" aria-label="Prism extension panel mockup">
             <div class="panel-title">
-              <span class="brand-mark small" aria-hidden="true">P</span>
+              <svg class="prism-logo small" viewBox="0 0 48 48" aria-hidden="true">
+                <path class="logo-edge" d="M24 4 42 14 42 34 24 44 6 34 6 14Z" />
+                <path class="logo-spectrum-a" d="M24 4 42 14 30 19Z" />
+                <path class="logo-spectrum-b" d="M24 4 30 19 24 25 18 19Z" />
+                <path class="logo-spectrum-c" d="M24 4 18 19 6 14Z" />
+                <path class="logo-dark-face" d="M6 14 24 25 24 44 6 34Z" />
+                <path class="logo-grid-face" d="M24 25 42 14 42 34 24 44Z" />
+                <path class="logo-grid-line" d="M29 22v19M35 18v19M24 31l18-10M24 37l18-10" />
+                <text x="15.8" y="32.8">P</text>
+              </svg>
               <div>
                 <strong>Prism</strong>
-                <span>Visual system scan</span>
+                <span>Suggestions for staging.acme.test</span>
               </div>
             </div>
             <div class="coverage-card">
@@ -99,11 +112,47 @@
               <strong>87%</strong>
               <small>Mapped visible DOM and CSS roles</small>
             </div>
-            <div class="role-map" aria-label="Mapped semantic roles">
-              <div><i style="--swatch: #f8f7f3"></i><span>Page background</span><b>#f8f7f3</b></div>
-              <div><i style="--swatch: #171717"></i><span>Primary text</span><b>#171717</b></div>
-              <div><i style="--swatch: #075985"></i><span>Links</span><b>#075985</b></div>
-              <div><i style="--swatch: #0f4c81"></i><span>Actions</span><b>#0f4c81</b></div>
+            <div class="theme-suggestions" aria-label="Generated Prism theme suggestions">
+              <div class="theme-option selected">
+                <div class="theme-swatches" aria-hidden="true">
+                  <i style="--swatch: #f8f7f3"></i>
+                  <i style="--swatch: #171717"></i>
+                  <i style="--swatch: #075985"></i>
+                  <i style="--swatch: #0f4c81"></i>
+                </div>
+                <div>
+                  <strong>Editorial Ink</strong>
+                  <span>Strong text contrast, restrained blue actions</span>
+                </div>
+              </div>
+              <div class="theme-option">
+                <div class="theme-swatches" aria-hidden="true">
+                  <i style="--swatch: #f6f8fb"></i>
+                  <i style="--swatch: #172033"></i>
+                  <i style="--swatch: #2563eb"></i>
+                  <i style="--swatch: #047857"></i>
+                </div>
+                <div>
+                  <strong>Product Clarity</strong>
+                  <span>Clean SaaS surfaces and green primary actions</span>
+                </div>
+              </div>
+              <div class="theme-option">
+                <div class="theme-swatches" aria-hidden="true">
+                  <i style="--swatch: #ffffff"></i>
+                  <i style="--swatch: #000000"></i>
+                  <i style="--swatch: #0000ee"></i>
+                  <i style="--swatch: #ffbf00"></i>
+                </div>
+                <div>
+                  <strong>High Contrast</strong>
+                  <span>Low-vision readability and focus visibility</span>
+                </div>
+              </div>
+            </div>
+            <div class="role-map compact" aria-label="Mapped semantic roles">
+              <div><span>Mapped roles</span><b>Page, text, link, action</b></div>
+              <div><span>Unsafe areas</span><b>Images, iframe</b></div>
             </div>
             <div class="impact-card">
               <strong>Accessibility impact</strong>
